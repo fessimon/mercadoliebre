@@ -12,17 +12,37 @@ body{
 /*--------------------------------------------------------*/
 header{
     background-color: #EAC926;
+    padding: 10px;
     
 }
 .cabecera{
- display: flex;
- justify-content: space-around;
+    display: block;
 }
+.cabecera-lg-sh{
+    display: flex;
+    align-items: center;
+}
+
 .logo{
-    width: 50%;
-    width: 50%;
-    
+    width: 50vw; 
 }
+
+.form-search{
+    display: flex;
+    position: relative;
+    padding: 3px 3px;
+    width: 50vw;
+    background-color: #fff;
+}
+.input-search{
+    border: none;
+    width: 40vw;
+}
+.icono-src{
+    width: 10%;
+    text-align: right;
+}
+
 
 .copy-header{
     font-weight: 400;
@@ -60,10 +80,8 @@ header nav ul li{
 /*-------------------------MAIN---------------------------*/
 /*--------------------------------------------------------*/
 main{
-    
     margin: auto;
-    background-color: rgb(235, 235, 235);
-    border: red 3px solid;  
+    background-color: rgb(235, 235, 235);  
 }
 .titular{
     text-align: center;
@@ -71,16 +89,17 @@ main{
 section{
         width: 90%;
         margin: auto;
-        margin-bottom: 10px;
-        border: blue 3px solid;
-        
+        margin-bottom: 10px;        
 }
+
 .logo-envio{
     color: #39b54a;
 }
+/*CAMIONCITO*/
 main section article div {
     position: relative;
 }
+
 main section article i{
     display: block;
     font-size: 16px;
@@ -92,23 +111,35 @@ main section article i{
     border-radius: 50%;
     position: absolute;
     right: 20px;
-    top: -15px;
+    top: -20px;
     }
+    main section article:hover i{
+        transform: rotate(-90deg);
+        transition: 0.5s;
+    }
+/*--FIN CAMIONCITO*/
 
-.div-precio,
-.div-desc,
-.div-descr{
-    border: blue 3px solid;
-}
 .producto-img{
-   
     background-color: #fff;
     margin: 15px;
 }
 section article div a img{
     width: 100%;
-    border: yellow 3px solid;
-    border-bottom: 2px solid #ebebeb;     
+    border-bottom: #ebebeb 2px solid ;     
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 8px rgb(100, 100, 100);
+    transition: 0.3s;
+}
+
+.descripcion {
+    display: none;
+ }
+main section article:hover p.descripcion {
+   display: block;
+   text-align: center;
+   margin-bottom: 10px;;
 }
 
 p.titular{
@@ -130,6 +161,7 @@ h4.descripcion{
 /*--------------------------------------------------------*/
 footer{
     margin-top: 15px;
+    background-color: #FFF;   
 }
 p.parrafo-footer{
     text-align: center;
@@ -152,31 +184,119 @@ footer div i{
     font-size: 13px;  
 }
 
+div i.img-footer:hover {
+    color: gray;
+}
+
 /*------------------------------------------*/
 /*-----------------MEDIAQUERIES-------------*/
 /*-----------------------------------------*/
-@media (min-width: 361px){
-    h4.descripcion{
-        display: block;
-    }
-    .burger-menu{
-        display: none;
-    }
-    .sit-navbar,
-    .login-navbar{
-        display: block;
-    }
-    header nav ul{
-        display: flex;
-    }
-   
-}
+
 @media (min-width: 769px) {
-    .producto-img{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .burger-menu{
-        display: none;
+    header {
+        justify-content: space-between;
     }
     
+    .cabecera{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cabecera-lg-sh{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form-search{
+        position: relative;
+        width: 30vw;
+        margin-left: 10px;
+        
+    }
+    
+    .burger-menu{
+        display: none;
+    }
+    .sit-navbar{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .sit-navbar ul{
+        display: flex;
+    }
+    .sit-navbar ul li{
+        margin: 0 5px;
+    }
+    
+    .burger-menu{
+        display: none;
+    }
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+    .logo{
+        width: 25vw;
+    }
+    /*-----MAIN------*/
+    .main-contenedor{
+        padding: 20px;
+    }
+    main{
+        font-display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    main section{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: space-around;
+    }
+    main section article{
+        border-radius: 10px;
+    }
+    .producto-img{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 30vw;
+    }
+    .main-art-descr{
+        display: flex;
+        height: 5vw;
+        padding-top: 10px;
+    }
+    .div-precio{
+        width: 40%;
+    }
+    
+    .div-desc{
+        width: 60%;
+        padding-left: 40px;   
+    }
+
+}
+
+
+@media (min-width: 1200px){
+    .producto-img {
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        width: 15vw;
+    }
+    main section article {
+    width: 25%;
+    }
+    
+    footer{
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    }
+    .footer-contenedor{
+        display: flex;
+        margin: auto;
+        padding: 20px;
+        width: 90%;
+    }
 }
