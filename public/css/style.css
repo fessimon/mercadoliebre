@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -26,7 +27,6 @@ header{
 .logo{
     width: 50vw; 
 }
-
 .form-search{
     display: flex;
     position: relative;
@@ -216,7 +216,79 @@ footer div i{
 div i.img-footer:hover {
     color: gray;
 }
+/*-----------------------------------------------*/
+/*--------------------FORM-----------------------*/
+/*-----------------------------------------------*/
+.main-registro{
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 30px auto;
+    align-items: center;
+    
+}
+.titulo-bienvenida-registro{
+    text-align: center;
+    font-size: 20px;
+}
+.form-input{
+    width: 80%;
+    padding: 5px;
+    border: 1px gray solid;
+}
+div .form-checkbox{
+    text-align: left;
+}
+.formulario-registro div{
+    text-align: center;
+    padding: 10px;
+}
+.form-radiobutton{
+    text-align: center;
+}
 
+.categorias{
+    text-align: center;
+    padding: 10px;
+}
+
+.form-button-seccion{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+button{
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: #1259c3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #6d9ee9;;
+    color: ffffff;
+    
+}
+
+.div-login{
+    padding: 20px;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 25px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.btn-login{
+    width: 200px;
+}
 /*------------------------------------------*/
 /*-----------------MEDIAQUERIES-------------*/
 /*-----------------------------------------*/
@@ -297,6 +369,16 @@ div i.img-footer:hover {
         padding-top: 10px;
 
     }
+    .form-button-seccion{
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    .main-registro{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
 }
 @media (min-width: 1200px){
     .producto-img {
@@ -320,5 +402,10 @@ div i.img-footer:hover {
     }
     .main-art-descr{
         height: 5vw;
+    }
+    .main-registro{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
     }
 }
