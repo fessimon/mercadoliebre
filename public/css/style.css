@@ -47,17 +47,20 @@ header{
 .copy-header{
     font-weight: 400;
     text-align: center;
-    border: green 3px solid;
 }
-header nav{
-    border: red 3px solid;
-}
+
 .sit-navbar,
 .login-navbar{
         display: none;
+        
+}
+.sit-navbar a{
+    text-decoration: none;
+    color: #222222;
 }
 header nav ul li{
-    list-style:none
+    list-style:none;
+    
 }
 .burger-menu{
     background-color: rgb(0, 68, 170);
@@ -141,7 +144,33 @@ main section article:hover p.descripcion {
    text-align: center;
    margin-bottom: 10px;;
 }
+.valores{
+    display: flex;
+}
+.div-precio{
+    width: 40%;
+}
 
+.div-desc{
+    width: 60%;
+    padding-left: 40px;   
+}
+.descr-valores{
+    display: flex;
+}
+.div-descr{
+    color: #a5a5a5;
+    font-weight: 400;
+    width: 100%;
+    height: 25px;
+}
+.main-art-descr{
+    display: flex;
+    height: 5vw;
+    padding-top: 10px;
+    margin-left: 15px;
+
+}
 p.titular{
     font-size: 24px;
 }
@@ -266,23 +295,13 @@ div i.img-footer:hover {
         display: flex;
         height: 5vw;
         padding-top: 10px;
-    }
-    .div-precio{
-        width: 40%;
-    }
-    
-    .div-desc{
-        width: 60%;
-        padding-left: 40px;   
-    }
 
+    }
 }
-
-
 @media (min-width: 1200px){
     .producto-img {
         box-shadow: 0px 0px 10px rgb(100 100 100);
-        width: 15vw;
+        width: 19vw;
     }
     main section article {
     width: 25%;
@@ -298,5 +317,8 @@ div i.img-footer:hover {
         margin: auto;
         padding: 20px;
         width: 90%;
+    }
+    .main-art-descr{
+        height: 5vw;
     }
 }
